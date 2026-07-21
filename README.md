@@ -32,11 +32,6 @@ Lotus AI is a chatbot web application developed using Python and Flask. It provi
 ### Data Exchange
 - JSON
 
-### Development Tools
-- Acode
-- Pydroid 3
-- GitHub
-
 ---
 
 ## Project Structure
