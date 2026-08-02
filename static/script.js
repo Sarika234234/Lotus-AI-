@@ -3,11 +3,19 @@ async function sendMessage() {
     const input = document.getElementById("message");
     const chatBox = document.getElementById("messages");
 
-    const message = input.value.trim();
+  const message = input.value.trim();
 
-    if (message === "") {
-        return;
-    }
+if (message === "") {
+    return;
+}
+
+// Privacy consent check
+const privacyCheck = document.getElementById("privacyCheck");
+
+if (!privacyCheck.checked) {
+    alert("Please read and accept the Privacy Notice before chatting.");
+    return;
+}
 
     chatBox.innerHTML += `<p><b>You:</b> ${message}</p>`;
 
