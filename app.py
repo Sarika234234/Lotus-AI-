@@ -4,6 +4,7 @@ import os
 import re
 
 app = Flask(__name__)
+
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 def sanitize_message(message):
     # Remove email addresses
