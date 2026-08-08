@@ -3,6 +3,8 @@
 
 <head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lotus AI</title>
 
 <link rel="stylesheet" href="/static/style.css">
@@ -16,34 +18,54 @@ Lotus AI
 </div>
 
 <div class="chat-container">
-  <div class="privacy-notice">
-    <strong>Privacy Notice</strong><br>
-    Lotus AI uses Google Gemini to generate responses. Before sending messages, Lotus AI attempts to remove common personal information such as email addresses and phone numbers. Please do not enter passwords, OTPs, bank details, government IDs, or any other highly sensitive information.
-</div>
 
-<label class="privacy-consent">
-    <input type="checkbox" id="privacyCheck">
-    I have read and understand the Privacy Notice.
-</label>
+    <div class="privacy-notice">
+        <strong>Privacy &amp; Safety</strong>
 
-<div class="messages" id="messages">
+        <p>
+            Lotus AI uses Google Gemini to generate AI responses.
+            We take reasonable measures to help protect your information,
+            including automatically filtering common email addresses and phone numbers
+            before a message is sent to the AI service.
+        </p>
 
-<p><b>Lotus AI:</b> Hello! How can I help you today?</p>
+        <p>
+            For your security, please do not enter passwords, verification codes,
+            bank or card information, government identification numbers,
+            or other highly sensitive personal information.
+        </p>
 
-</div>
+        <p>
+            By using Lotus AI, you acknowledge this notice.
+        </p>
+    </div>
 
-<div class="input-area">
+    <label class="privacy-consent">
+        <input type="checkbox" id="privacyCheck">
+        I understand the Privacy &amp; Safety notice.
+    </label>
 
-<input
-id="message"
-type="text"
-placeholder="Type your message...">
+    <div class="messages" id="messages">
 
-<button onclick="sendMessage()">
-Send
-</button>
+        <p>
+            <b>Lotus AI:</b> Hello! How can I help you today?
+        </p>
 
-</div>
+    </div>
+
+    <div class="input-area">
+
+        <input
+            id="message"
+            type="text"
+            placeholder="Type your message..."
+        >
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
 
 </div>
 
