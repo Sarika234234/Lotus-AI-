@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request, jsonify
-import google.generativeai as genai
+from google import genai
 import os
 import re
 
 app = Flask(__name__)
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
-model = genai.GenerativeModel("gemini-1.5-flash-latest")
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 def sanitize_message(message):
     # Remove email addresses
     message = re.sub(
@@ -32,7 +30,10 @@ def get_reply(message):
 )
 
     try:
-        response = model.generate_content(clean_message)
+        response = client.models.generate_content(
+    model="gemini-3.6-flash",
+    contents=clean_message
+        )
 
         if response.text:
             return response.text
