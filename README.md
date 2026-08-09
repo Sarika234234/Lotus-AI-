@@ -70,6 +70,9 @@ LotusAI/
 └── static/
     ├── style.css
     └── script.js
+
+
+
 ## Future Development
 
 - Persistent conversation management
